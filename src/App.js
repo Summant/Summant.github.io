@@ -94,10 +94,10 @@ function App() {
           <div className="about-content">
             <div className="about-text">
               <p>
-                I am a passionate software developer with a strong foundation in computer science and a keen interest in building innovative solutions. My expertise spans across web development, machine learning, and software engineering.
+                I am a sophomore studying Computer Science at NYU Tandon School of Engineering. My interests in computer science include Data Science, Machine Learning, Data Modeling, and Databases. I am eager to pursue the field of computer science, especially in areas that deal with machine learning and artificial intelligence.
               </p>
               <p>
-                I enjoy tackling complex problems and creating efficient, user-friendly applications that make a real impact.
+                Currently working as an "Introduction to Computer Science Classroom Assistant" at NYU Tandon, where I host labs, attend weekly meetings, hold office hours, and grade homework assignments.
               </p>
             </div>
             <div className="about-stats">
@@ -106,7 +106,7 @@ function App() {
                 <p>University</p>
               </div>
               <div className="stat-item">
-                <h3>2024</h3>
+                <h3>2027</h3>
                 <p>Graduation Year</p>
               </div>
               <div className="stat-item">
