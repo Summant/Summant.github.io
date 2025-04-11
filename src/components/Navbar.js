@@ -4,8 +4,8 @@ const Navbar = ({ darkMode, toggleDarkMode, activeSection, scrollToSection, mobi
   const navLinks = [
     { id: 'home', label: 'Home' },
     { id: 'about', label: 'About' },
-    { id: 'projects', label: 'Projects' },
     { id: 'skills', label: 'Skills' },
+    { id: 'projects', label: 'Projects' },
     { id: 'contact', label: 'Contact' }
   ];
 
@@ -13,13 +13,6 @@ const Navbar = ({ darkMode, toggleDarkMode, activeSection, scrollToSection, mobi
     <nav className="navbar">
       <div className="nav-content">
         <div className="logo">Summant</div>
-        <button 
-          className="mobile-menu-btn" 
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          aria-label="Toggle mobile menu"
-        >
-          <div className={`hamburger ${mobileMenuOpen ? 'open' : ''}`}></div>
-        </button>
         <div className={`nav-links ${mobileMenuOpen ? 'mobile-open' : ''}`}>
           {navLinks.map(({ id, label }) => (
             <a

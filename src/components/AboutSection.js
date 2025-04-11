@@ -9,9 +9,9 @@ const StatItem = ({ number, label }) => (
 
 const AboutSection = () => {
   const stats = [
-    { number: "2+", label: "ML Projects" },
-    { number: "250+", label: "Connections" },
-    { number: "2027", label: "Expected Graduation" }
+    { number: "Computer Science", label: "Major" },
+    { number: "Mathematics and Quantum Technology", label: "Minors"},
+    { number: "NYU Tandon", label: "School" }
   ];
 
   return (

@@ -1,25 +1,31 @@
 import React from 'react';
 
-const ProjectCard = ({ title, description, technologies, githubLink }) => {
+const ProjectCard = ({ project }) => {
   return (
     <div className="project-card">
-      <h3>{title}</h3>
-      <p className="project-description">{description}</p>
-      <div className="tech-stack">
-        {technologies.map((tech, index) => (
-          <span key={index} className="tech-tag">{tech}</span>
-        ))}
+      <div className="project-content">
+        <h3 className="fixed-height-title">{project.title}</h3>
+        <div className="scrollable-content">
+          <p className="project-description">{project.description}</p>
+          <div className="project-tags">
+            {project.technologies.map((tech, index) => (
+              <span key={index}>{tech}</span>
+            ))}
+          </div>
+        </div>
+        <div className="project-links">
+          {project.githubLink && (
+            <a 
+              href={project.githubLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="project-links a"
+            >
+              View on GitHub
+            </a>
+          )}
+        </div>
       </div>
-      {githubLink && (
-        <a 
-          href={githubLink}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="github-link"
-        >
-          View on GitHub
-        </a>
-      )}
     </div>
   );
 };
@@ -27,9 +33,9 @@ const ProjectCard = ({ title, description, technologies, githubLink }) => {
 const Projects = () => {
   const projects = [
     {
-      title: "Handwritten Digit Recognition",
+      title: "Stock Price Prediction",
       description: "Developed a deep learning model using TensorFlow and Keras to recognize handwritten digits with 98% accuracy on the MNIST dataset.",
-      technologies: ["Python", "TensorFlow", "Keras", "NumPy"],
+      technologies: ["Python", "TensorFlow", "Keras", "Pandas", "Scikit-learn"],
       githubLink: "https://github.com/Summant/digit-recognition"
     },
     {
@@ -48,12 +54,19 @@ const Projects = () => {
 
   return (
     <section id="projects" className="projects-section">
-      <div className="container">
-        <h2>Projects</h2>
-        <div className="projects-grid">
-          {projects.map((project, index) => (
-            <ProjectCard key={index} {...project} />
-          ))}
+      <div className="projects-container">
+        <div className="section-header">
+          <h2>Projects</h2>
+        </div>
+        <div className="scrollable-grid">
+          <div className="projects-grid">
+            {projects.map((project, index) => (
+              <ProjectCard 
+                key={index} 
+                project={project}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </section>
